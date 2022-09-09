@@ -1,0 +1,200 @@
+<!DOCTYPE html> <!-- doctype声明为 HTML5 文档HyperText Markup Language 一种标记语言 -->
+<html lang="en"> <!-- html元素是页面的根元素 -->
+<!-- 
+    头部元素head包含元数据meta，插入脚本scripts，样式文件css 
+    title:
+        定义了浏览器工具栏的标题
+        当网页添加到收藏夹时，显示在收藏夹中的标题
+        显示在搜索引擎结果页面的标题
+    base: 描述了基本的链接地址/链接目标，该标签作为HTML文档中所有的链接标签的默认链接
+    link: 定义了文档与外部资源之间的关系，通常用于链接到样式表
+    style: 定义了HTML文档的样式文件引用地址, 也可以直接添加样式来渲染HTML文档
+    meta: 不显示但会被浏览器解析，用于指定网页的描述，关键词，文件的最后修改时间，作者等
+    script: 用于添加脚本文件
+-->
+<head> 
+    <meta charset="UTF-8"> <!-- 定义网页编码格式 utf-8和gbk都支持中文 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan</title> <!-- title元素描述文档的标题 -->
+</head>
+<body> <!-- 可见的页面内容 -->
+    <!-- 这是注释 -->
+    <!-- 标题：        
+        搜索引擎使用标题为网页的结构和内容编制索引；
+        应该将 h1 用作主标题（最重要的），其后是 h2（次重要的），再其次是 h3，以此类推
+        1号字体对应6号标题，2号字体对应5号标题
+     -->
+    <h1>这是一个h1标题</h1> <!-- h1元素定义一个大标题 -->
+    <h2>这是一个h2标题</h2>
+    <h3>这是一个h3标题</h3>
+    <h4>这是一个h4标题</h4>
+    <h5>这是一个h5标题</h5>
+    <h6>这是一个h6标题</h6>
+
+    <!-- 段落：        
+        HTML代码中所有连续的空格或空行都会被算作一个空格。
+     -->
+    <p>我的第一个段落</p> <!-- p标签定义段落 -->
+    <p>这是第二个段落</p>
+    <p>这个<br>段落<br>演示了分行的效果</p>
+    <hr/> <!-- hr标签创建水平线，用于分隔内容 -->
+    <a id="bing" href="https://www.bing.com" target="_blank" re>Bing搜索</a> <!-- a标签定义一个超链接 href属性指定链接地址 target属性指定打开方式 id定义书签，可以被定位到-->
+    <br> <!-- br空元素定义换行没有关闭标签 -->
+    <br/> <!-- 关闭空元素的正确方法 -->
+    <img src="c:\Users\Lenovo\Pictures\12.jpg" alt="图片缺失" width="200" height="200"> <!-- img标签定义图像 -->
+
+    <!-- 
+        文本格式化标签
+     -->
+     <p>
+        <b>粗体文本</b>
+        <strong>加重语气</strong>
+        <br>
+        <i>斜体</i>
+        <em>着重文字</em>
+        <br>
+        <small>小号字</small>
+        <br>
+        H<sub>2</sub>O
+        <br>
+        x<sup>n</sup>
+        <br>
+        <del>删除字</del>
+        <br>
+        My favorite color is <del>blue</del> <ins>red</ins>! <!-- del和ins一起使用，描述文档中的更新和修正 -->
+    </p>
+    <code>一段电脑代码 print("Hello World")</code>
+    <samp>计算机样本</samp>
+    <p>
+        The <abbr title="World Health Organization">WHO</abbr> was found in 1948. <!-- abbr标签用来表示一个缩写词或者首字母缩略词 -->
+    </p>
+
+    <!-- 
+        属性：以名称=值的形式，name="value";属性值包括在引号内；大小写不敏感
+        class:类名classname 
+        id:唯一id
+        style：行内样式 inline style
+        title:额外信息，作为工具条使用
+    -->
+    <a href="#bing">定位到Bing搜索</a><br>
+    <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">简单发送邮件</a><br> <!-- 单词之间空格使用 %20 代替 -->
+    <a href="mailto:someone@example.com?cc=someoneelse@example.com&bcc=andsomeoneelse@example.com&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!" target="_top">复杂发送邮件!</a><br>
+
+    <!-- 
+        CSS添加到HTML中以下三种方式，最好的是第三种
+            内联样式- 在HTML元素中使用"style" 属性
+            内部样式表 -在HTML文档头部 <head> 区域使用<style> 元素 来包含CSS
+            外部引用 - 使用外部 CSS 文件
+        属性
+            backgroud-color: 背景颜色
+            font-family: 字体
+            color: 字体颜色
+            font-size: 字体大小
+            text-align: 文本对齐方式
+    -->
+    <p style="color:rgb(234, 234, 241);margin-left:20px;background-color:rgb(29, 30, 29)">这是一个段落。</p>
+
+    <table border="1"> <!-- 表格，tr table row, th table header, td table data -->
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>row 1, cell 1</td>
+            <td>row 1, cell 2</td>
+        </tr>
+        <tr>
+            <td>row 2, cell 1</td>
+            <td>row 2, cell 2</td>
+        </tr>
+    </table>
+
+    <ul> <!-- 无序列表unordered lists，只能通过CSS定义不同类型style="list-style-type:disc or circel or square" -->
+        <li>Coffee</li>
+        <li>Milk</li>
+    </ul>
+
+    <ol> <!-- 有序列表ordered lists，通过type属性修改数列A,a,I,i -->
+        <li>Coffee</li>
+        <li>Milk</li>
+    </ol>
+
+    <dl> <!-- 自定义列表defininition lists,dt defininition term, dd definition description -->
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+
+    <!-- 
+        div是块级元素block-level，用于组合其他元素的容器，没有特定的含义，常见的用途是文档布局和样式设置
+        默认情况下，浏览器通常会在 <div> 元素前后放置一个换行符。然而，您可以通过使用 CSS 改变这种情况。
+    -->
+    <div style="color:#0000FF">
+        <h3>这是一个在 div 元素中的标题。</h3>
+        <p>这是一个在 div 元素中的文本。</p>
+    </div>
+
+    <!-- 
+        span是内联元素inline，作为文本的容器，用于为部分文本设置样式,或者使用 JavaScript 对它进行操作
+    -->
+    <p>我有<span style="color:red">红色</span>的眼睛。</p>
+
+    <!-- div布局 -->
+    <div id="container" style="width: 500px;background-color: rgb(231, 228, 223);">
+        <div id="header">
+            <h1 style="margin-bottom: 0px">标题</h1>
+        </div>
+        <div id="menu" style="background-color: blue;height: 200px;width: 100px;float:left">
+            <b>菜单</b><br>
+            HTML<br>
+            CSS<br>
+            JavaScript
+        </div>
+        <div id="content" style="background-color:yellow;height: 200px;width: 400px;float:left">
+            内容
+        </div>
+        <div id="footer" style="clear: both;text-align: center;">
+            版权
+        </div>
+    </div>
+
+    <!-- 表单
+        一个包含表单元素的区域
+        input
+            text：文本域
+            password：密码字段
+            radio：单选按钮
+            checkbox：复选框
+            submit：提交按钮
+        textarea
+        label
+        select
+        button
+
+    -->
+    <form>
+        First name: <input type="text" name="firstname"><br>
+        Last name: <input type="text" name="lastname">
+    </form>
+
+    <form action="">
+        Passward: <input type="passward" name="pwd">
+    </form>
+    <form action="">
+        <input type="radio" name="sex" value="male">男<br>
+        <input type="radio" name="sex" value="female">女
+    </form>
+    <form>
+        <input type="checkbox" name="vehicle" value="Bike">我喜欢自行车<br>
+        <input type="checkbox" name="vehicle" value="Car">我喜欢小汽车
+    </form>
+    <form name="input" action="Welcome PHP.php" method="get">
+        Username: <input type="text" name="user">
+        <input type="submit" value="Submit">
+    </form>
+
+    <iframe loading="lazy" src="HTML5.html" width="200" height="200"></iframe>
+</body>
+</html>
